@@ -1,0 +1,10 @@
+{
+  "Product": [
+    {"id":123, "category":"books"},
+    {"id":124, "category":"products"},
+    {"id":125, "category":"books and products"}
+  ],
+  "Error": [
+    {"code":404, "message":"Not Found"}
+  ]
+}

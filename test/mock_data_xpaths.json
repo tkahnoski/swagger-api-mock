@@ -1,0 +1,46 @@
+{
+  "/v1/products": {
+    "mock": true,
+    "request": {
+      "xpath": "//Product",
+      "xpaths": [
+        {
+          "if":["category"],
+          "xpath": "[contains(category,\"{category}\")]"
+        }
+      ],
+      "type": "array",
+      "unique": "id"
+    }
+  },
+  "/v1/products/{productId}": {
+    "mock": true,
+    "request": {
+      "xpath": "//Product[id={productId}]",
+      "type": "object",
+      "unique": "id"
+    }
+  },
+  "/v1/products/{productId}/images": {
+    "mock": true,
+    "request": {
+      "xpath": "//Product[id={productId}]/images",
+      "xpaths": [
+        {
+          "if":["flag"],
+          "xpath": "contains(flag,'{flag}')"
+        }
+      ],
+      "type": "array",
+      "unique": "id"
+    }
+  },
+  "/v1/products/{productId}/images/{imageId}": {
+    "mock": true,
+    "post": {
+      "xpath": "//Product[id={productId}]/images[id='{imageId}')",
+      "unique": "id",
+      "operation": "replace"
+    }
+  }
+}
