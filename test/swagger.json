@@ -1,24 +1,24 @@
 {
   "swagger": "2.0",
-  "info": {
-    "description": "Example API",
-    "version": "1.0.0",
-    "title": "Example API for Swagger API Mock node module",
-    "contact": {
-      "email": "sergey.myasnikov@daimler.com"
-    }
-  },
   "host": "api.example.com",
   "basePath": "/v1",
   "tags": [
     {
       "name": "products",
-      "description": "Access products"
+      "description": "Products API"
     }
   ],
   "schemes": [
     "https"
   ],
+  "info": {
+    "description": "Example products API",
+    "version": "1.0.1",
+    "title": "Example API for Swagger API Mock node module",
+    "contact": {
+      "email": "bulkismaslom@gmail.com"
+    }
+  },
   "paths": {
     "/products": {
       "get": {
